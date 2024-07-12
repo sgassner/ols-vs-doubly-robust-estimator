@@ -25,7 +25,7 @@ This project compares the performance of Ordinary Least Squares (OLS) and Doubly
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/sandrogassner/ols_vs_dre_monte_carlo_study.git
+    git clone https://github.com/sgassner/ols_vs_dre_monte_carlo_study.git
     cd ols_vs_dre_monte_carlo_study
     ```
 
