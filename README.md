@@ -108,8 +108,8 @@ Three different DGPs are used in this study:
 
     Steps involved:
 
-    - Estimate the propensity score $\hat{p}(x_i)$ by a logit or probit model.
-    - Estimate the outcome equation $\hat{\mu}(1, x_i)$ and $\hat{\mu}(0, x_i)$ by parametric models.
+    - Estimate the propensity score \hat{p}(x_i) by a logit or probit model.
+    - Estimate the outcome equation \hat{\mu}(1, x_i) and \hat{\mu}(0, x_i) by parametric models.
     - Calculate the estimated ATE using the formula:
 
     ```math
