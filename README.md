@@ -4,6 +4,10 @@
 
 This project compares the performance of Ordinary Least Squares (OLS) and Doubly Robust Estimator (DRE) in estimating the Average Treatment Effect (ATE) using Monte Carlo simulations. The study is based on predefined data generating processes (DGPs) and aims to provide insights into the conditions under which each estimator performs better.
 
+## Autor
+
+Sandro Gassner
+
 ## Date
 
 01.05.2022
