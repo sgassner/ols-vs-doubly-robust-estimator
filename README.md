@@ -11,7 +11,7 @@ This project compares the performance of Ordinary Least Squares (OLS) and Doubly
 ## Project Structure
 
 - `ols_vs_dre_functions.py`: Contains functions for data generation, estimation, simulation, and result visualization.
-- `main.py`: The main script to run the simulations and generate results.
+- `ols_vs_dre_simulation.py`: The main script to run the simulations and generate results.
 
 ## Requirements
 
