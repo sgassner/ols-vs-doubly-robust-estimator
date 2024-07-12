@@ -4,10 +4,6 @@
 
 This project compares the performance of Ordinary Least Squares (OLS) and Doubly Robust Estimator (DRE) in estimating the Average Treatment Effect (ATE) using Monte Carlo simulations. The study is based on predefined data generating processes (DGPs) and aims to provide insights into the conditions under which each estimator performs better.
 
-## Author
-
-Sandro Gassner
-
 ## Date
 
 01.05.2022
@@ -15,7 +11,7 @@ Sandro Gassner
 ## Project Structure
 
 - `ols_vs_dre_functions.py`: Contains functions for data generation, estimation, simulation, and result visualization.
-- `main.py`: The main script to run the simulations and generate results.
+- `ols_vs_dre_simulation.py`: The main script to run the simulations and generate results.
 
 ## Requirements
 
@@ -29,7 +25,7 @@ Sandro Gassner
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/sandrogassner/ols_vs_dre_monte_carlo_study.git
+    git clone https://github.com/sgassner/ols_vs_dre_monte_carlo_study.git
     cd ols_vs_dre_monte_carlo_study
     ```
 
@@ -96,11 +92,15 @@ Three different DGPs are used in this study:
     - Estimates parameters by minimizing the sum of squared residuals.
     - Suitable for linear models with homogeneous effects.
 
-    $$ \text{ATE} = \alpha $$
+    ```math
+    \text{ATE} = \alpha
+    ```
 
     Where the model is specified as:
 
-    $$ E[Y | D = d, X = x] = \mu(d, x) = d\alpha + x\beta $$
+    ```math
+    E[Y | D = d, X = x] = \mu(d, x) = d\alpha + x\beta
+    ```
 
 2. **Doubly Robust Estimator (DRE)**:
     - Combines propensity score weighting and regression adjustment.
@@ -108,11 +108,13 @@ Three different DGPs are used in this study:
 
     Steps involved:
 
-    - Estimate the propensity score \( \hat{p}(x_i) \) by a logit or probit model.
-    - Estimate the outcome equation \( \hat{\mu}(1, x_i) \) and \( \hat{\mu}(0, x_i) \) by parametric models.
+    - Estimate the propensity score \hat{p}(x_i) by a logit or probit model.
+    - Estimate the outcome equation \hat{\mu}(1, x_i) and \hat{\mu}(0, x_i) by parametric models.
     - Calculate the estimated ATE using the formula:
 
-    $$ \hat{ATE}_{DR} = \frac{1}{N} \sum_{i=1}^{N} \left[ \hat{\mu}(1, x_i) - \hat{\mu}(0, x_i) + \frac{d_i(y_i - \hat{\mu}(1, x_i))}{\hat{p}(x_i)} - \frac{(1 - d_i)(y_i - \hat{\mu}(0, x_i))}{1 - \hat{p}(x_i)} \right] $$
+    ```math
+    \hat{ATE}_{DR} = \frac{1}{N} \sum_{i=1}^{N} \left[ \hat{\mu}(1, x_i) - \hat{\mu}(0, x_i) + \frac{d_i(y_i - \hat{\mu}(1, x_i))}{\hat{p}(x_i)} - \frac{(1 - d_i)(y_i - \hat{\mu}(0, x_i))}{1 - \hat{p}(x_i)} \right]
+    ```
 
 ### Performance Measures
 
